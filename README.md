@@ -8,6 +8,8 @@ An end-to-end Business Intelligence project built on **Microsoft Fabric** that i
 
 This project implements a production-style data pipeline following the **Staging → Presentation** pattern, with full metadata logging at every stage. The pipeline is designed to be fully dynamic — it automatically detects the latest loaded date and increments month-over-month without manual intervention.
 
+<img width="2554" height="1103" alt="image" src="https://github.com/user-attachments/assets/7929cc5a-49c4-4fd0-b0af-a4d143c51ae3" />
+
 ```
 Parquet Files (NYC TLC)
         ↓
@@ -153,6 +155,7 @@ AS
         @processed_date
     FROM STG.NYC_Taxi_Yellow;
 ```
+<img width="2511" height="806" alt="image" src="https://github.com/user-attachments/assets/feb642c6-5442-43ff-a1ad-4fdb51ef5be7" />
 
 ---
 
@@ -205,12 +208,15 @@ AS
         @processed_date
     FROM dbo.nyctaxi_yellow;
 ```
+<img width="1451" height="1074" alt="image" src="https://github.com/user-attachments/assets/431bfc14-bece-4f7a-a630-91dd59bb085b" />
 
 ---
 
 ### Stage 3 — Master Pipeline
 
 A parent pipeline invokes both the staging and presentation pipelines in sequence using **Execute Pipeline** activities, providing a single trigger point for the full end-to-end run.
+
+<img width="1617" height="784" alt="image" src="https://github.com/user-attachments/assets/eb3dd1c4-ae4c-40ce-863a-f8f2e40d96a8" />
 
 ---
 
@@ -244,6 +250,8 @@ The report provides analytics across:
 - Pickup and drop-off borough/zone breakdowns
 - Passenger count and trip distance distributions
 - Payment method splits
+
+<img width="2356" height="1092" alt="image" src="https://github.com/user-attachments/assets/97080a43-e31e-4c21-8708-238e29b6dcfd" />
 
 ---
 
